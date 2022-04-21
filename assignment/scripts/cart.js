@@ -52,14 +52,11 @@ console.log(isFull(basket));
 console.log('Adding apples (expect true)', addItem('apples'));
 console.log(`Basket is now ${basket}`);
 
-
-// This needs more work... I can get it to remove index 1 of basket, just not the correct/exact item.
-function removeItem(array, item) {
+function removeItem(basket, nameOfItem) {
     for (let i = 0; i < basket.length; i++) {
-        if (item === array[item]); {
-            array.splice(item, 1);
-            return array;
-        }
+        return basket.splice(basket.indexOf(nameOfItem), 1);
     }
 }
-console.log(removeItem(basket, 'Chips'));
+
+console.log('Removing this item from the basket:', removeItem(basket, 'Chips'));
+console.log(`Basket is now ${basket}`);
