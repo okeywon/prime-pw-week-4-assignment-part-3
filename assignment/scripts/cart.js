@@ -55,12 +55,11 @@ console.log(`Basket is now ${basket}`);
 
 // This needs more work... I can get it to remove index 1 of basket, just not the correct/exact item.
 function removeItem(array, item) {
-    let index = array.indexOf(item);
-    for (let x = 0; x < basket.length; x++) {
-        if (index > -1 && basket[x] === item); {
-            basket.splice(item, 1);
-            return basket;
+    for (let i = 0; i < basket.length; i++) {
+        if (item === array[item]); {
+            array.splice(item, 1);
+            return array;
         }
     }
 }
-console.log(removeItem('Chips'));
+console.log(removeItem(basket, 'Chips'));
